@@ -9,6 +9,14 @@
 }
 /* sharedstyle */
 
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+
 .btn-primary{
     background-color: #FF900E;
     color: white;
@@ -62,16 +70,113 @@
     margin-bottom: 50px;
 
  }
+
+.banner img{
+    width: 100%;
+}
  .banner-tittle{
     font-weight: 700;
     font-size: 4rem;
  }
 
+ /* team related 
+  */
+  .teams  {
+    align-items: center;
+  }
+
+  .team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+  }
+  .our-features{
+  margin-left: 130px;
+  max-width: 530px;
+  }
+  .feature-tittle{
+    font-size: 2.8rem;
+  }
+#quick-list{
+    font-weight: 500;
+}
+
+#features{
+    color: #FF900E;
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.fact-card{
+    display: grid;
+    border: 1px solid red;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fact-name{
+    margin-top: 5px;
+    /* border: 1px solid red; */
+
+}
+.fact-number{
+    /* border: 1px solid red; */
+    margin-bottom: 2px;
+
+}
+
+.sponcer_info{
+    max-width:540px ;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companiese{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.sponsor-companiese img {
+    filter: grayscale(100%);
+}
+
  /* reponsive */
  @media screen and (max-width:576px) {
-    .nav-lists, .navbar{
+    .nav-lists, .navbar , .teams{
         flex-direction: column;
+    }
+
+    .team-img-container , 
+    .facts-container ,
+    .sponsor-companiese
+    {
+          grid-template-columns: repeat(1,1fr);
+          gap: 14px;
+          justify-items: center;
+ 
+
+    }
+     .our-features{
+  margin-left: 50px; 
+}
+
+    
+ }
+
+ @media  screen and (max-min:576px) and (max-width:992px) {
+    .teams{
+        flex-direction: column;
+
+    }
+
+    .our-features{
+        margin: 50px auto;
     }
     
  }
+    
+ 
 
